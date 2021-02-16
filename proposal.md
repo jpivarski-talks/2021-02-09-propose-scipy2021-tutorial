@@ -58,5 +58,14 @@ I've already established that this dataset has many interesting patterns to be f
 
 ## Setup instructions
 
+Exact software requirements will be specified (with a test script) before the tutorial as part of the tutorial repository, though they will all be available on PyPI and conda-forge (`awkward`, `pyarrow`, `matplotlib`, JupyterLab, and possibly others). Python 3 will be required.
 
+I will host public URLs to all the datasets used in the presentation, and I am looking into hosting cloud resources (Jupyter front-ends with direct access to the data) to give to participants for the duration of the tutorial. File sizes are:
 
+   * 2.3 MB bike routes (GeoJSON)
+   * 51 MB exoplanets (CSV)
+   * 870 MB heavily prefiltered LHC collisions (ROOT)
+   * 6.4 GB Argo Floats (Parquet) _or_ 0.7 GB subset (2020 only)
+   * 79 GB Million Songs (Parquet) _or_ 0.7 GB subset (10,000 songs)
+
+All participants will need to have access to the software and datasets, particularly the Million Songs (or its subset), to contribute to their group's data exploration. I'll know well in advance of the tutorial whether cloud resources will be available, which would remove the need for each participant to download the large files. (All are public datasets; I am in contact with most of those datasets' authors.)
