@@ -24,7 +24,7 @@ The session alternates between expositions of concepts and time-bound problems (
 
 **0:00‒0:10 (10 min):** Array-oriented programming as a paradigm: APL, SPEAKEASY, IDL, MATLAB, S, R, NumPy. (Showing the keyboard APL used!)
 
-**0:10‒0:30 (20 min):** Arrays (single and multidimensional), element indexing, range slicing, boolean- and integer-array slicing, using text-vectorization as an example. (Powerful concept: element indexing is function application, and integer-array slicing is function composition.)
+**0:10‒0:30 (20 min):** Arrays (single and multidimensional), element indexing, range slicing, boolean- and integer-array slicing, using text-vectorization as an example. (Powerful concept: element indexing is function application and integer-array slicing is function composition.)
 
 **0:30‒0:40 (10 min):** Applying array-at-a-time (vectorized) functions to an array and multiple arrays (with a word about broadcasting).
 
@@ -34,26 +34,26 @@ The session alternates between expositions of concepts and time-bound problems (
 
 **1:10‒1:30 (20 min):** The "iterate until converged" problem, using a Mandelbrot calculation as an example.
 
-**1:30‒1:50 (20 min):** **Exercise:** evaluating a decision tree for many inputs at once (given the tree as an array of indexes pointing to the next nodes). Leaves have to be absorbing states; iteration stops when all inputs reach leaves. **Optional extension:** instead of the busy-wait, try masking out the inputs that have reached leaves. Which method is faster (for a set of example trees)?
+**1:30‒1:50 (20 min):** **Exercise:** evaluating a decision tree for many inputs at once (given the tree as an array of indexes pointing to the next nodes, such as what `sklearn.tree.DecisionTreeRegressor` returns). Leaves have to be absorbing states; iteration stops when all inputs reach leaves. **Optional extension:** instead of the busy-wait, try masking out the inputs that have reached leaves. Which method is faster (for a set of example trees)?
 
 **1:50‒2:00 (10 min):** _(break)_
 
 **2:00‒2:10 (10 min):** **Demo** mixing loopy and unloopy code: computing the Mandelbrot (1) with a Numba kernel for each pixel, (2) parallelized over pixels, and (3) on a GPU.
 
-**2:10‒2:20 (10 min):** Using reducers, with histogram-projection (sum 3D → 2D and 2D → 1D) as an example.
+**2:10‒2:20 (10 min):** Using reducers, with histogram-projection as an example (sum 3D → 2D and 2D → 1D).
 
 **2:20‒2:40 (20 min):** **Exercise:** roll your own rolling mean (without `np.convolve` or `pd.DataFrame.rolling`). **Optional extension:** do it with a non-square kernel (e.g. a Gaussian kernel).
 
 **2:40‒2:50 (10 min):** _(break)_
 
-**2:50‒3:00 (10 min):** Introducing irregularly shaped arrays, with the Awkward Array package: indexing, slicing, and broadcasting with irregular arrays.
+**2:50‒3:00 (10 min):** Introducing irregularly shaped arrays ("jagged" or "ragged" arrays), using the Awkward Array package: indexing, slicing, and broadcasting with irregular arrays.
 
 **3:00‒3:20 (20 min):** Chicago taxi trip dataset (~GB Parquet file, variable number of trips per taxi and variable length paths per trip): basic exploration, putting techniques into practice (select by fare, by starting point in the city, by starting date, etc.).
 
 **3:20‒3:40 (20 min):** **Reduction exercise:** compute path lengths per trip. **Optional extension:** find the ratio of each with distance "as the crow flies."
 
-**3:40‒4:00 (20 min):** **Bonus exercise:** tidy the data (put it in 3rd normal form), resulting in a table of taxis, a table of trips, and a table of positions in paths. **Optional extension:** repeat the calculation of path lengths per trip using "group by" in Pandas.
+**3:40‒4:00 (20 min):** **Bonus exercise:** tidy the data (put it in 3rd normal form), resulting in a table of taxis, a table of trips, and a table of positions in paths, all connected by surrogate keys. **Optional extension:** repeat the calculation of path lengths per trip using "group by" in Pandas.
 
 **Total time: 4 hours.**
 
-All of the exercises are break-out sessions. If in-person, I would walk around the room, checking up on each group. If on Zoom, I would navigate between break-out room. (If hybrid, I can do both.) The exposition parts are all together, following prepared examples, but allowing for questions. The one demo (at **2:00**) is exposition—whether the students will be able to try it with me depends on whether I manage to get cloud resources with GPUs attached. If not, we'll be using mybinder.org without GPUs; they'll only be able to watch.
+All of the exercises are break-out sessions. If in-person, I would walk around the room, checking in on each group as they work. If on Zoom, I would navigate between break-out rooms. (If hybrid, I can do both.) The exposition parts are mini-lectures, using prepared examples, but the students will be encouraged to evaluate them with me so they can change the parameters, explore, and ask questions. The one demo (at **2:00‒2:10**) is also a mini-lecture—whether the students will be able to try it with me depends on whether I manage to get cloud resources with GPUs attached. If not, they'll use mybinder.org without GPUs; they'll only be able to watch.
